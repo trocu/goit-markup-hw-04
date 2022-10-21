@@ -1,4 +1,7 @@
 :root {
+  /* 
+  HTML elements color 
+  */
   --brand-color: #2196f3;
   --light-txt-color: #757575;
   --grey-bkg: #2f303a;
@@ -6,6 +9,12 @@
   --light-line: #eee;
   --header-line: #ececec;
   --white-item: #fff;
+  --our-customers-box: #afb1b8;
+
+  /* 
+  Specific icons color
+  */
+  --footer-socialmedia-icons: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -25,6 +34,18 @@ ul {
   padding: 0 15px;
   margin: 0 auto;
 }
+.hidden-dot {
+  list-style-type: none;
+  padding: 0;
+}
+.hidden-title {
+  display: none;
+}
+
+/* 
+Logo & nav section
+------------------ 
+*/
 .section-border {
   border-bottom: 1px solid;
   border-color: var(--header-line);
@@ -96,6 +117,11 @@ ul {
 .logo-wh-color {
   color: var(--white-item);
 }
+
+/* 
+Main title section
+------------------ 
+*/
 .main-title-wrap {
   padding: 106px 0;
 }
@@ -134,14 +160,17 @@ ul {
 }
 .grey-rectangle {
   background: var(--grey-bkg);
+  background-image: url("../images/cover.jpg"); /* fallback */
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url("../images/cover.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1600px; /* gradient cap */
 }
-.hidden-dot {
-  list-style-type: none;
-  padding: 0;
-}
-.hidden-title {
-  display: none;
-}
+/* 
+Lorem ipsum & what we do section
+-------------------------------- 
+*/
 .main-txt-wrapper ul {
   display: flex;
   flex-wrap: wrap;
@@ -154,6 +183,7 @@ ul {
   flex-basis: calc((100% - 90px) / 4);
 }
 .main-txt h3 {
+  margin: 0 0 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -161,6 +191,7 @@ ul {
   text-transform: uppercase;
 }
 .main-txt p {
+  margin: 0;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -175,6 +206,11 @@ ul {
 .main-foto-wrapper li {
   flex-basis: calc((100% - 60px) / 3);
 }
+
+/* 
+About us section
+---------------- 
+*/
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -208,7 +244,7 @@ ul {
   letter-spacing: 0.03em;
 }
 .about-us p {
-  margin: 0;
+  margin: 0 0 16px;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -222,20 +258,29 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
+/* 
+Footer section
+-------------- 
+*/
 .footer-box {
   background: var(--grey-bkg);
 }
-.footer-box p {
+.footer-wrapper {
+  display: flex;
+}
+.footer-address {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-right: 70px;
+}
+.footer-address p {
   margin: 0;
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--white-item);
-}
-.footer-div {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 .logo-footer {
   display: block;
@@ -262,11 +307,23 @@ ul {
 .link-footer li {
   margin-top: 9px;
 }
-
+.footer-socialmedia {
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+.footer-socialmedia p {
+  margin: 0 0 20px;
+  color: var(--white-item);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
 /* 
-=============================== 
-Specific portfolio styles below
-=============================== 
+=====================
+Main portfolio styles
+=====================
 */
 
 .portfolio-btn-wrap ul {
@@ -322,6 +379,11 @@ Specific portfolio styles below
 .portfolio-box-desc p:last-child {
   margin: 0;
 }
+.portfolio-box li:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
 .project-name {
   font-weight: 700;
   font-size: 18px;
@@ -336,4 +398,111 @@ Specific portfolio styles below
 }
 .portfolio-footer-margin {
   margin-top: 94px;
+}
+
+/* 
+============
+Icons styles
+============
+*/
+
+/* 
+Header contact icons
+-------------------- 
+*/
+.link-contact:hover svg,
+.link-contact:focus svg {
+  color: var(--brand-color);
+  --color4: var(--brand-color);
+}
+.icon-grey {
+  color: var(--light-txt-color);
+  --color4: var(--light-txt-color);
+}
+.icon-grey:hover,
+.icon-grey:focus {
+  color: var(--brand-color);
+  --color4: var(--brand-color);
+}
+
+/* 
+About us social media icons
+---------------------------  
+*/
+.icon-aboutus-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.icon-aboutus-wrapper svg {
+  cursor: pointer;
+}
+.icon-aboutus-wrapper svg:hover {
+  color: var(--brand-color);
+  --color3: var(--white-item);
+  --color5: var(--brand-color);
+}
+
+/* 
+Lorem ipsum icons
+----------------- 
+*/
+.main-txt-icon-box {
+  background-color: var(--light-grey-item);
+  border-radius: 4px;
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+.main-txt-icon-box svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* 
+Our customers logos
+------------------- 
+*/
+.our-customers-wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.our-customers-box li {
+  width: 170px;
+  border: 1px solid;
+  border-color: var(--our-customers-box);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 13px 0;
+}
+.our-customers-box svg {
+  display: block;
+  margin: 0 auto;
+}
+.our-customers-box li:hover {
+  border-color: var(--brand-color);
+  color: var(--brand-color);
+  --color3: var(--brand-color);
+}
+
+/* 
+Footer social media icons
+-------------------------
+*/
+.icon-footer-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.icon-footer-wrapper svg {
+  cursor: pointer;
+  color: var(--footer-socialmedia-icons);
+  --color3: var(--white-item);
+  --color5: var(--footer-socialmedia-icons);
+}
+.icon-footer-wrapper svg:hover {
+  color: var(--brand-color);
+  --color3: var(--white-item);
+  --color5: var(--brand-color);
 }
