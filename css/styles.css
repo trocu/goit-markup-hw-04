@@ -14,7 +14,7 @@
   /* 
   Specific icons color
   */
-  --footer-socialmedia-icons: rgba(255, 255, 255, 0.1);
+  --footer-socialmedia-elipse: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -154,7 +154,8 @@ Main title section
   margin: 0 auto;
   display: block;
 }
-.main-button:hover {
+.main-button:hover,
+.main-button:focus {
   color: #212121;
   background-color: var(--light-grey-item);
 }
@@ -164,7 +165,7 @@ Main title section
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url("../images/cover.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position-x: 50%;
   background-size: 1600px; /* gradient cap */
 }
 /* 
@@ -344,7 +345,8 @@ Main portfolio styles
   letter-spacing: 0.03em;
   cursor: pointer;
 }
-.portfolio-button:hover {
+.portfolio-button:hover,
+.portfolio-button:focus {
   color: var(--white-item);
   background-color: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -426,24 +428,6 @@ Header contact icons
 }
 
 /* 
-About us social media icons
----------------------------  
-*/
-.icon-aboutus-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.icon-aboutus-wrapper svg {
-  cursor: pointer;
-}
-.icon-aboutus-wrapper svg:hover {
-  color: var(--brand-color);
-  --color3: var(--white-item);
-  --color5: var(--brand-color);
-}
-
-/* 
 Lorem ipsum icons
 ----------------- 
 */
@@ -459,28 +443,51 @@ Lorem ipsum icons
 }
 
 /* 
+About us social media icons
+---------------------------  
+*/
+.icon-aboutus-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.icon-aboutus-wrapper a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.icon-aboutus-wrapper a:hover,
+.icon-aboutus-wrapper a:focus {
+  background-color: var(--brand-color);
+  --color3: var(--white-item);
+  cursor: pointer;
+}
+
+/* 
 Our customers logos
 ------------------- 
 */
-.our-customers-wrapper ul {
+.our-customers-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
-.our-customers-box li {
-  width: 170px;
+.our-customers-wrapper a {
+  display: inline-block;
   border: 1px solid;
   border-color: var(--our-customers-box);
   border-radius: 4px;
   cursor: pointer;
-  padding: 13px 0;
+  width: 170px;
+  height: 92px;
 }
-.our-customers-box svg {
-  display: block;
-  margin: 0 auto;
-}
-.our-customers-box li:hover {
+.our-customers-wrapper a:hover,
+.our-customers-wrapper a:focus {
   border-color: var(--brand-color);
   color: var(--brand-color);
   --color3: var(--brand-color);
@@ -495,14 +502,19 @@ Footer social media icons
   justify-content: center;
   gap: 10px;
 }
-.icon-footer-wrapper svg {
-  cursor: pointer;
-  color: var(--footer-socialmedia-icons);
-  --color3: var(--white-item);
-  --color5: var(--footer-socialmedia-icons);
+.icon-footer-wrapper a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--footer-socialmedia-elipse);
 }
-.icon-footer-wrapper svg:hover {
-  color: var(--brand-color);
+.icon-footer-wrapper a:hover,
+.icon-footer-wrapper a:focus {
+  background-color: var(--brand-color);
   --color3: var(--white-item);
-  --color5: var(--brand-color);
+  cursor: pointer;
 }
