@@ -308,11 +308,11 @@ Footer section
 .link-footer li {
   margin-top: 9px;
 }
-.footer-socialmedia {
+.footer-socialmmedia {
   padding-top: 72px;
   padding-bottom: 100px;
 }
-.footer-socialmedia p {
+.footer-socialmmedia p {
   margin: 0 0 20px;
   color: var(--white-item);
   font-weight: 700;
@@ -414,16 +414,6 @@ Header contact icons
 */
 .link-contact:hover svg,
 .link-contact:focus svg {
-  color: var(--brand-color);
-  --color4: var(--brand-color);
-}
-.icon-grey {
-  color: var(--light-txt-color);
-  --color4: var(--light-txt-color);
-}
-.icon-grey:hover,
-.icon-grey:focus {
-  color: var(--brand-color);
   --color4: var(--brand-color);
 }
 
@@ -489,7 +479,6 @@ Our customers logos
 .our-customers-wrapper a:hover,
 .our-customers-wrapper a:focus {
   border-color: var(--brand-color);
-  color: var(--brand-color);
   --color3: var(--brand-color);
 }
 
