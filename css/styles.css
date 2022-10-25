@@ -500,6 +500,7 @@ Footer social media icons
   height: 44px;
   border-radius: 50%;
   background-color: var(--footer-socialmedia-elipse);
+  --color3: var(--white-item);
 }
 .icon-footer-wrapper a:hover,
 .icon-footer-wrapper a:focus {
